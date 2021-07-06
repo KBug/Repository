@@ -98,7 +98,7 @@ def Movies():
      addLink(name,link,logo,'','')
      
 def Check_For_Updates():
-   r = requests.get('https://raw.githubusercontent.com/ParrotDevelopers/Parrot-TV-Kodi/main/Updates/8.0.0/CheckForUpdate.txt')
+   r = requests.get('https://raw.githubusercontent.com/ParrotDevelopers/Parrot-TV-Kodi/main/Updates/9.0.0/CheckForUpdate.txt')
    match = re.compile('name= (.+?) url= "(.+?)" logo= "(.+?)"').findall(r.content)
    for name,link, logo in match:
      addLink(name,link,logo,'','')
