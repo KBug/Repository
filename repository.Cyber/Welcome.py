@@ -12,7 +12,7 @@ except ImportError:
     from urllib.request import urlopen
 
 INTERVAL =  24 * 60 * 60 
-ANNOUNCEMENTS = 'https://raw.githubusercontent.com/ParrotDevelopers/Repository/Addons/Welcome/Welcome.json'
+ANNOUNCEMENTS = 'https://raw.githubusercontent.com/ParrotDevelopers/Repository/WWW/Welcome/Welcome.json'
 LAST = 'last_ann'
 
 if __name__ == '__main__':
