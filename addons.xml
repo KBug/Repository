@@ -1,49 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.parrot.tv"
-       name="Parrot TV"
-       version="9.0.0"
-       provider-name="Parrot Developers">
-  <requires>
-    <import addon="xbmc.python" version="2.2.0"/>
-    <import addon="script.module.requests"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource"
-            library="default.py">
-        <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">Parrot TV is free project by Parrot Developers</summary>
-    <language>en</language>
-    <description lang="en">Free CZ/SK TV for all. These links are freely avalibe on WWW.</description>
-    <description lang="cz">CZ / SK TV Zdarma pro všechny.</description>
-    <description lang="sk">CZ/SK Televízia zadarmo pre všetkých.</description>
-     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.parrot.tv+matrix"
-version="2.0.0"
-name="Parrot TV"
-provider-name="Parrot Developers + HereIronman7746">
-<requires>
-  <import addon="xbmc.python" version="3.0.0"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">Free tv channels. If you want movies download addon "sosac.ph" From kodi XBMC cz</summary>
-  <description lang="en_GB">Free tv channels. If you want movies download addon "sosac.ph" From kodi XBMC cz</description>
-  <disclaimer lang="en_GB">All links are freely avalibe on www.</disclaimer>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
-  </assets>
-  <news>Initial version</news>
-</extension>
-</addon>
-
 <addon id="repository.cache-sk" name="Kodi cache-sk Addons" version="1.0.4" provider-name="cache-sk">
     <extension point="xbmc.addon.repository" name="Kodi cache-sk Addons">
         <info compressed="false">https://raw.githubusercontent.com/cache-sk/kodirepo/master/repository/addons.xml</info>
@@ -102,9 +58,21 @@ provider-name="Parrot Developers + HereIronman7746">
 
 <addon id="repository.Cyber" name="Cyber Repository" version="1.0.0" provider-name="Parrot Developers">
     <extension point="xbmc.addon.repository" name="Cyber Repository">
-        <info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Addons/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Addons/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Addons/zips</datadir>
+        <info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/zips</datadir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/zips</datadir>
+		</dir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/zips</datadir>
+		</dir>
 
 		<dir>
 			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
@@ -150,125 +118,5 @@ provider-name="Parrot Developers + HereIronman7746">
 		<disclaimer>Educational use only, not for public release.</disclaimer>
 		<platform>all</platform>
 	</extension>
-</addon>
-
-<addon id="script.module.certifi"
-       name="certifi"
-       version="2019.9.11"
-       provider-name="Kenneth Reitz">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python package for providing Mozilla's CA Bundle.</summary>
-    <description lang="en_GB">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts. It has been extracted from the Requests project.</description>
-    <license>MPL-2.0</license>
-    <website>https://certifi.io</website>
-    <source>https://github.com/certifi/python-certifi</source>
-    <email>freso.dk AT gmail.com</email>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.chardet"
-       name="chardet"
-       version="3.0.4"
-       provider-name="Dan Blanchard">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Universal encoding detector</summary>
-    <description lang="en_GB">Packed for Kodi from https://github.com/chardet/chardet</description>
-    <license>LGPL</license>
-    <platform>all</platform>
-    <language></language>
-    <forum></forum>
-    <website>https://chardet.readthedocs.io/en/latest/</website>
-    <source>https://github.com/beenje/script.module.chardet</source>
-    <email>beenje AT gmail.com</email>
-  </extension>
-</addon>
-
-<addon id="script.module.idna"
-       name="idna"
-       version="2.8"
-       provider-name="Kim Davies">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Internationalized Domain Names for Python</summary>
-    <description lang="en_GB">Packed for KODI from https://github.com/kjd/idna</description>
-    <platform>all</platform>
-    <language></language>
-    <license>BSD</license>
-    <forum></forum>
-    <website>https://github.com/kjd/idna</website>
-    <source>https://github.com/Freso/script.module.idna</source>
-    <email>freso.dk AT gmail.com</email>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.requests"
-       name="requests"
-       version="2.22.0"
-       provider-name="kennethreitz">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-    <import addon="script.module.urllib3" version="1.22"/>
-    <import addon="script.module.chardet" version="3.0.4"/>
-    <import addon="script.module.idna" version="2.6"/>
-    <import addon="script.module.certifi" version="2017.07.27.1"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">Python HTTP for Humans</summary>
-    <description lang="en_GB">Packed for KODI from https://pypi.org/project/requests/</description>
-    <platform>all</platform>
-    <language></language>
-    <license>Apache2</license>
-    <forum></forum>
-    <website>http://python-requests.org</website>
-    <source>https://github.com/Freso/script.module.requests</source>
-    <email>freso.dk AT gmail.com</email>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.module.urllib3"
-       name="urllib3"
-       version="1.25.6"
-       provider-name="Andrey Petrov">
-  <requires>
-    <import addon="xbmc.python" version="2.25.0"/>
-  </requires>
-  <extension point="xbmc.python.module"
-             library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">HTTP library with thread-safe connection pooling, file post, and more.</summary>
-    <description lang="en_GB">Packed for KODI from https://pypi.org/project/urllib3/</description>
-    <license>MIT</license>
-    <website>https://urllib3.readthedocs.io/en/latest/</website>
-    <source>https://github.com/urllib3/urllib3</source>
-    <email>freso.dk AT gmail.com</email>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
 </addon>
 </addons>
