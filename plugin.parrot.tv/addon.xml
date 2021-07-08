@@ -18,11 +18,11 @@
     <description lang="cz">CZ / SK TV Zdarma pro všechny.</description>
     <description lang="sk">CZ/SK Televízia zadarmo pre všetkých.</description>
     <assets>
-      <icon>resources\media\Icon\icon.png</icon>    
-      <fanart>resources\media\Icon\fanart.jpg</fanart>
-      <screenshot>resources\media\Screenshot\1.png</screenshot>
-      <screenshot>resources\media\Screenshot\2.png</screenshot>
-      <screenshot>resources\media\Screenshot\3.png</screenshot>    
+      <icon>icon.png</icon>    
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources\media\Screenshot-1.png</screenshot>
+      <screenshot>resources\media\Screenshot-2.png</screenshot>
+      <screenshot>resources\media\Screenshot-3.png</screenshot>    
     </assets>
      <platform>all</platform>
   </extension>
