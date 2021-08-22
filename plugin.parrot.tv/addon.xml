@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
+<?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.parrot.tv"
 version="2.0.0"
 name="Parrot TV"
@@ -21,4 +20,3 @@ provider-name="Parrot Developers + HereIronman7746">
   <news>Initial version</news>
 </extension>
 </addon>
-</addons>
