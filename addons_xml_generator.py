@@ -1,28 +1,3 @@
-#!/usr/bin/env python2.7
-# *
-# *  Copyright (C) 2012-2013 Garrett Brown
-# *  Copyright (C) 2010      j48antialias
-# *
-# *  This Program is free software; you can redistribute it and/or modify
-# *  it under the terms of the GNU General Public License as published by
-# *  the Free Software Foundation; either version 2, or (at your option)
-# *  any later version.
-# *
-# *  This Program is distributed in the hope that it will be useful,
-# *  but WITHOUT ANY WARRANTY; without even the implied warranty of
-# *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-# *  GNU General Public License for more details.
-# *
-# *  You should have received a copy of the GNU General Public License
-# *  along with XBMC; see the file COPYING.  If not, write to
-# *  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
-# *  http://www.gnu.org/copyleft/gpl.html
-# *
-# *  Based on code by j48antialias:
-# *  https://anarchintosh-projects.googlecode.com/files/addons_xml_generator.py
- 
-""" addons.xml generator """
-
 import os
 import sys
 import zipfile
@@ -118,41 +93,24 @@ def zipfolder(foldername, target_dir, zips_dir):
     rootlen = len(target_dir) + 1
     for base, dirs, files in os.walk(target_dir):
         for file in files:
-            if not ".git" in base:
-                fn = os.path.join(base, file)
-                zipobj.write(fn, os.path.join(foldername[:-4],fn[rootlen:]))
+            fn = os.path.join(base, file)
+            zipobj.write(fn, os.path.join(foldername[:-4],fn[rootlen:]))
     zipobj.close()
+
                      
 if ( __name__ == "__main__" ):
     # start
     Generator()
+
     #rezip files an move
-    print 'Removing all pyo and pyc files from addons...'
+    print ('Starting zip file creation...')
     rootdir = sys.path[0]
     zipsdir = rootdir + '\zips'
-    #remove all pyo file from addons.
-    for root, dirs, files in os.walk(rootdir):            
-        rem_folder = ['_MACOSX']
-        rem_files  = ['.pyo','DS_Store', '.pyc']    
-        for f in files:
-            try:
-                if any(x in f for x in rem_files):
-                    os.unlink(os.path.join(root, f))
-                    print 'Removing: ' + os.path.join(root, f)
-                else: continue
-            except: pass
-        for d in dirs:
-            try:
-                if any(x in d for x in rem_folder):
-                    shutil.rmtree(os.path.join(root, d))
-                    print 'Removing: ' + os.path.join(root, d)
-                else: continue
-            except: pass
-    print 'Starting zip file creation...'
+
     filesinrootdir = os.listdir(rootdir)
     for x in filesinrootdir:
-        if re.search("plugin|repository|script|skin|network|program" , x):#|repository
-            foldertozip = rootdir+'\\'+x
+        if re.search("plugin|repository|script" , x):#|repository
+            foldertozip = rootdir+'/'+x
             zipfilename = x + '.zip'
             zipfilenamefirstpart = zipfilename[:-4]
             zipfilenamelastpart = zipfilename[len(zipfilename)-4:]
@@ -161,31 +119,31 @@ if ( __name__ == "__main__" ):
             zipsfolder = os.path.normpath(zipsfolder) + os.sep
             if not os.path.exists(zipsfolder):
                 os.mkdir(zipsfolder)
-                print 'Directory doesn\'t exist, creating: ' + zipsfolder
+                print ('Directory doesn\'t exist, creating: ' + zipsfolder)
             #check if and move changelog, fanart and icon to zipdir
             filesinfoldertozip = os.listdir(foldertozip)
             for y in filesinfoldertozip:
-                print 'processing file: ' + os.path.join(rootdir,x,y)
+                print ('processing file: ' + os.path.join(rootdir,x,y))
                 if re.search("addon.xml", y): # get version number of plugin
                     tree = ET.parse(os.path.join(rootdir,x,y))
                     root = tree.getroot()
                     for elem in root.iter('addon'):
-                        print elem.tag + ': ' + elem.attrib['version']
+                        print (elem.tag + ': ' + elem.attrib['version'])
                         version = '-'+elem.attrib['version']
                 if re.search("changelog", y):
                     firstpart = y[:-4]
                     lastpart = y[len(y)-4:]
                     shutil.copyfile(os.path.join(rootdir,x,y),os.path.join(zipsfolder,firstpart+version+lastpart))
-                    print 'Copying ' + y + ' to ' + zipsfolder
-                if re.search("icon|fanart", y):
+                    print ('Copying ' + y + ' to ' + zipsfolder)
+                if re.search("changelog|icon|fanart", y):
                     shutil.copyfile(os.path.join(rootdir,x,y),os.path.join(zipsfolder,y))
-                    print 'Copying ' + y + ' to ' + zipsfolder
+                    print ('Copying ' + y + ' to ' + zipsfolder)
             zipfolder(zipfilenamefirstpart+zipfilenamelastpart, foldertozip, zipsfolder)
-            print 'Zipping ' + zipfilename + ' and moving to ' + zipfilenamefirstpart+version
-            print 'zipfolder',zipsfolder
-            print 'foldertozip',foldertozip
-            print 'Old dir',os.path.join(os.path.join(os.getcwd(),zipsfolder),zipfilenamefirstpart+zipfilenamelastpart)
-            print 'New Name',zipfilenamefirstpart+version+zipfilenamelastpart
+            print ('Zipping ' + zipfilename + ' and moving to ' + zipfilenamefirstpart+version)
+#            print 'zipfolder',zipsfolder
+#            print 'foldertozip',foldertozip
+#            print 'Old dir',os.path.join(os.path.join(os.getcwd(),zipsfolder),zipfilenamefirstpart+zipfilenamelastpart)
+#            print 'New Name',zipfilenamefirstpart+version+zipfilenamelastpart
             shutil.move( os.path.join(os.path.join(os.getcwd(),zipsfolder),zipfilenamefirstpart+zipfilenamelastpart),os.path.join(os.path.join(os.getcwd(),zipsfolder),zipfilenamefirstpart+version+zipfilenamelastpart))
             #,zipfilenamefirstpart+version+zipfilenamelastpart);
-            print 'Zipping ' + zipfilename + ' and moving to ' + zipfilenamefirstpart+version
+            #print 'Zipping ' + zipfilename + ' and moving to ' + zipfilenamefirstpart+version

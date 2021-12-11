@@ -13,5 +13,4 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
-    <extension point="xbmc.service" library="announcements.py" />
 </addon>

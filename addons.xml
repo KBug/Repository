@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
+<addon id="repository.light" name="[COLOR blue]Lightning Repo[/COLOR]" provider-name="Parrot Developers" version="1.0.0">
+	<extension point="xbmc.addon.repository" name="Lightning Repo" >
+			<dir minversion="19.0.0">
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/zips/</datadir>
+			</dir>
+			<dir maxversion="18.9.9">
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/zips/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/zips/</datadir>
+			</dir>
+			<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+			</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Lightning Repository is repositoru for kodi addons.</summary>
+		<description lang="en">Imagine here a good description.</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="repository.Cyber" name="Cyber Repository" version="1.0.0" provider-name="Parrot Developers">
+    <extension point="xbmc.addon.repository" name="Cyber Repository">
+        <info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/zips</datadir>
+
+		<dir maxversion="18.9.9">
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/zips</datadir>
+		</dir>
+
+		<dir minversion="19.0.0">
+			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/zips</datadir>
+		</dir>
+
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+		</dir>
+
+
+
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Cyber Repository</summary>
+        <description>Cyber Repository</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+    <extension point="xbmc.service" library="Welcome.py" />
+</addon>
+
 <addon id="repository.StreamArmy" name="[COLOR crimson]S[COLOR silver]tream Army Repo 18 / 19 Compatible Addons[/COLOR]" version="13.0.003" provider-name="@Nemzzy668 / @_Manc_">
 	<extension point="xbmc.addon.repository" name="Stream Army">
 		<dir>
@@ -79,81 +154,5 @@
             <icon>icon.png</icon>
         </assets>
     </extension>
-    <extension point="xbmc.service" library="announcements.py" />
-</addon>
-
-<addon id="repository.Cyber" name="Cyber Repository" version="1.0.0" provider-name="Parrot Developers">
-    <extension point="xbmc.addon.repository" name="Cyber Repository">
-        <info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/zips</datadir>
-
-		<dir maxversion="18.9.9">
-			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/zips</datadir>
-		</dir>
-
-		<dir minversion="19.0.0">
-			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/zips</datadir>
-		</dir>
-
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-		</dir>
-
-
-
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Cyber Repository</summary>
-        <description>Cyber Repository</description>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
-    <extension point="xbmc.service" library="Welcome.py" />
-</addon>
-
-<addon id="repository.light" name="[COLOR blue]Lightning Repo[/COLOR]" provider-name="Parrot Developers" version="1.0.0">
-	<extension point="xbmc.addon.repository" name="Lightning Repo" >
-			<dir minversion="19.0.0">
-			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Matrix/zips/</datadir>
-			</dir>
-			<dir maxversion="18.9.9">
-			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Leia/zips/</datadir>
-			</dir>
-			<dir>
-			<info compressed="false">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/ParrotDevelopers/Repository/Universal/zips/</datadir>
-			</dir>
-			<dir>
-			<info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
-			</dir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Lightning Repository is repositoru for kodi addons.</summary>
-		<description lang="en">Imagine here a good description.</description>
-		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-		<disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<assets>
-			<icon>icon.png</icon>
-			<fanart>fanart.jpg</fanart>
-		</assets>
-	</extension>
 </addon>
 </addons>
