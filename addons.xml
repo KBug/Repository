@@ -110,10 +110,10 @@ provider-name="Parrot Developers">
 <extension point="xbmc.addon.metadata">
   <summary>Czech TV Shows at one place.</summary>
   <description >Czech TV Shows for free.</description>
-  <disclaimer>I do not host any of these links.</disclaimer>
+  <disclaimer>Most of links come from AONN.cz</disclaimer>
   <assets>
-    <icon>resources/IMG/icon.png</icon>
-    <fanart>resources/IMG/fanart.jpg</fanart>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
   </assets>
   <news>[1.0.0] Initial version!</news>
 </extension>
