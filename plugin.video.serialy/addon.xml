@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.serialy"
-version="1.0.0"
+version="1.0.1"
 name="Seriály"
 provider-name="Parrot Developers">
 <requires>
@@ -18,6 +18,9 @@ provider-name="Parrot Developers">
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart> 
   </assets>
-  <news>[1.0.0] Initial version!</news>
+  <news>
+  [1.0.0] Initial version!
+  [1.0.1] Fixed errors.
+  </news>
 </extension>
 </addon>
