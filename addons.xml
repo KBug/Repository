@@ -122,6 +122,28 @@ provider-name="Parrot Developers">
 </extension>
 </addon>
 
+<addon id="plugin.video.ekostol"
+version="1.0.0"
+name="Ekostol"
+provider-name="Parrot Developers">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="addon.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>Watch streams from ekostol.sk.</summary>
+  <description >Watch streams from ekostol.sk.</description>
+  <disclaimer>All links come from ekostol.sk.</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>[1.0.0] Initial version!</news>
+</extension>
+</addon>
+
 <addon id="script.module.chardet" name="chardet" version="4.0.0+matrix.1" provider-name="Character Encoding Detector">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
