@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="script.module.urllib3" name="urllib3" version="1.26.4+matrix.1" provider-name="urllib3">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.module" library="lib" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python</summary>
-    <description lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python. Much of the Python ecosystem already uses urllib3 and you should too. urllib3 brings many critical features that are missing from the Python standard libraries</description>
-    <license>MIT</license>
-    <platform>all</platform>
-    <website>https://urllib3.readthedocs.io/en/latest/</website>
-    <source>https://github.com/urllib3/urllib3</source>
-    <assets>
-      <icon>resources/icon.png</icon>
-    </assets>
-  </extension>
+<addon id="plugin.video.ekostol"
+version="1.0.0"
+name="Ekostol"
+provider-name="Parrot Developers">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="addon.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>Watch streams from ekostol.sk.</summary>
+  <description >Watch streams from ekostol.sk.</description>
+  <disclaimer>All links come from ekostol.sk.</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>[1.0.0] Initial version!</news>
+</extension>
 </addon>
 
 <addon id="plugin.video.prehrajto"
 version="1.1.0"
-name="Přehraj.to"
-provider-name="Sároš">
+name="PÅ™ehraj.to"
+provider-name="SÃ¡roÅ¡">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" />
@@ -31,12 +35,61 @@ provider-name="Sároš">
         <provides>video</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="cs">Přehraj.to</summary>
-        <description lang="cs">Vyhledávání, přehrávání, stahování filmů a seriálů ze serveru Přehraj.to</description>
+        <summary lang="cs">PÅ™ehraj.to</summary>
+        <description lang="cs">VyhledÃ¡vÃ¡nÃ­, pÅ™ehrÃ¡vÃ¡nÃ­, stahovÃ¡nÃ­ filmÅ¯ a seriÃ¡lÅ¯ ze serveru PÅ™ehraj.to</description>
         <assets>
             <icon>icon.png</icon>
         </assets>
     </extension>
+</addon>
+
+<addon id="plugin.video.serialy"
+version="1.0.1"
+name="SeriÃ¡ly"
+provider-name="Parrot Developers">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests" version="2.25.1"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="addon.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>Czech TV Shows at one place.</summary>
+  <description >Czech TV Shows for free.</description>
+  <disclaimer>Most of links come from AONN.cz</disclaimer>
+  <assets>
+    <icon>icon.png</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>
+  [1.0.0] Initial version!
+  [1.0.1] Fixed errors.
+  </news>
+</extension>
+</addon>
+
+<addon id="plugin.video.ustvgo"
+version="1.0.0"
+name="USTVGO"
+provider-name="Parrot Developers">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests" version="2.25.1"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="addon.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>USTVGO Channels in KODI.</summary>
+  <description>USTVGO Channels in KODI.</description>
+  <disclaimer>Some channels need VPN.</disclaimer>
+  <assets>
+    <icon>icon.jpg</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>[1.0.0] Initial version!</news>
+</extension>
 </addon>
 
 <addon id="script.module.certifi" name="certifi" version="2020.12.05+matrix.1" provider-name="Certifi">
@@ -50,6 +103,24 @@ provider-name="Sároš">
     <license>MPL-2.0</license>
     <website>https://certifi.io</website>
     <source>https://github.com/certifi/python-certifi</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.chardet" name="chardet" version="4.0.0+matrix.1" provider-name="Character Encoding Detector">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">The Universal Character Encoding Detector</summary>
+    <description lang="en_GB">The Universal Character Encoding Detector</description>
+    <license>LGPL-2.1</license>
+    <platform>all</platform>
+    <website>https://chardet.readthedocs.io/en/latest/</website>
+    <source>https://github.com/chardet/chardet</source>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
@@ -96,66 +167,18 @@ provider-name="Sároš">
   </extension>
 </addon>
 
-<addon id="plugin.video.serialy"
-version="1.0.1"
-name="Seriály"
-provider-name="Parrot Developers">
-<requires>
-  <import addon="xbmc.python" version="3.0.0"/>
-  <import addon="script.module.requests" version="2.25.1"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="addon.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary>Czech TV Shows at one place.</summary>
-  <description >Czech TV Shows for free.</description>
-  <disclaimer>Most of links come from AONN.cz</disclaimer>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
-  </assets>
-  <news>
-  [1.0.0] Initial version!
-  [1.0.1] Fixed errors.
-  </news>
-</extension>
-</addon>
-
-<addon id="plugin.video.ekostol"
-version="1.0.0"
-name="Ekostol"
-provider-name="Parrot Developers">
-<requires>
-  <import addon="xbmc.python" version="3.0.0"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="addon.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary>Watch streams from ekostol.sk.</summary>
-  <description >Watch streams from ekostol.sk.</description>
-  <disclaimer>All links come from ekostol.sk.</disclaimer>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
-  </assets>
-  <news>[1.0.0] Initial version!</news>
-</extension>
-</addon>
-
-<addon id="script.module.chardet" name="chardet" version="4.0.0+matrix.1" provider-name="Character Encoding Detector">
+<addon id="script.module.urllib3" name="urllib3" version="1.26.4+matrix.1" provider-name="urllib3">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension point="xbmc.python.module" library="lib" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en_GB">The Universal Character Encoding Detector</summary>
-    <description lang="en_GB">The Universal Character Encoding Detector</description>
-    <license>LGPL-2.1</license>
+    <summary lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python</summary>
+    <description lang="en_GB">urllib3 is a powerful, user-friendly HTTP client for Python. Much of the Python ecosystem already uses urllib3 and you should too. urllib3 brings many critical features that are missing from the Python standard libraries</description>
+    <license>MIT</license>
     <platform>all</platform>
-    <website>https://chardet.readthedocs.io/en/latest/</website>
-    <source>https://github.com/chardet/chardet</source>
+    <website>https://urllib3.readthedocs.io/en/latest/</website>
+    <source>https://github.com/urllib3/urllib3</source>
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
