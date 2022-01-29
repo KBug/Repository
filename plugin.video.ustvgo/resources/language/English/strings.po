@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: sk\n"
+
+msgctxt "#30090"
+msgid "Main"
+msgstr "Main"
+
+msgctxt "#30091"
+msgid "Show channels that require VPN"
+msgstr "Show channels that require VPN"
+
+msgctxt "#30092"
+msgid "Replace sources for VPN channels."
+msgstr "Replace sources for VPN channels."
+
+msgctxt "#30093"
+msgid "Show \"| [VPN]\""
+msgstr "Show \"| [VPN]\""
+
+msgctxt "#30010"
+msgid "Error setting up PVR IPTV Simple"
+msgstr "Error setting up PVR IPTV Simple"
+
+msgctxt "#30006"
+msgid "Setup PVR IPTV Simple"
+msgstr "Setup PVR IPTV Simple"
