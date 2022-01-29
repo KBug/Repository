@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.ekostol"
+<addon id="plugin.video.MixDrop"
 version="1.0.0"
-name="Ekostol"
+name="MixDrop"
 provider-name="Parrot Developers">
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests" version="2.25.1"/>
+  <import addon="script.module.js2py" version="1.0.0"/>
+  <import addon="inputstream.adaptive" version="2.3.13"/>
 </requires>
 <extension point="xbmc.python.pluginsource" library="addon.py">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary>Watch streams from ekostol.sk.</summary>
-  <description >Watch streams from ekostol.sk.</description>
-  <disclaimer>All links come from ekostol.sk.</disclaimer>
+  <summary>MixDrop URL Resolver.</summary>
+  <description>MixDrop URL Resolver.</description>
+  <disclaimer>MixDrop URL Resolver.</disclaimer>
   <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
+    <icon>icon.jpg</icon>
   </assets>
-  <news>[1.0.0] Initial version!</news>
+  <news>
+    [1.0.0] Initial version!
+    [1.0.1] Added support for bypassing VPN.
+    [1.0.2] Fixed bypass.
+  </news>
 </extension>
 </addon>
 
@@ -70,7 +76,7 @@ provider-name="Parrot Developers">
 </addon>
 
 <addon id="plugin.video.ustvgo"
-version="1.0.0"
+version="1.0.5"
 name="USTVGO"
 provider-name="Parrot Developers">
 <requires>
@@ -88,7 +94,41 @@ provider-name="Parrot Developers">
     <icon>icon.jpg</icon>
     <fanart>fanart.jpg</fanart>
   </assets>
-  <news>[1.0.0] Initial version!</news>
+  <news>
+    [1.0.0] Initial version!
+    [1.0.1] Added support for bypassing VPN.
+    [1.0.2] Fixed bypass.
+    [1.0.3] Removed bypass, added channels. I'll fix that bypass different day.
+    [1.0.4] Added best encryption.
+    [1.0.5] Added alternative links.
+  </news>
+</extension>
+</addon>
+
+<addon id="plugin.video.vidembed"
+version="1.0.0"
+name="Vidembed.io"
+provider-name="Parrot Developers">
+<requires>
+  <import addon="xbmc.python" version="3.0.0"/>
+  <import addon="script.module.requests" version="2.25.1"/>
+  <import addon="script.module.beautifulsoup4" version="2.9.9"/>
+  <import addon="script.module.resolveurl" version="5.1.00"/>
+</requires>
+<extension point="xbmc.python.pluginsource" library="addon.py">
+  <provides>video</provides>
+</extension>
+<extension point="xbmc.addon.metadata">
+  <summary>Watch movies from vidembed.io</summary>
+  <description>Watch movies from vidembed.io</description>
+  <disclaimer>I'm not affiliated with vidembed.io.</disclaimer>
+  <assets>
+    <icon>icon.jpg</icon>
+    <fanart>fanart.jpg</fanart>
+  </assets>
+  <news>
+    [1.0.0] Initial version!
+  </news>
 </extension>
 </addon>
 
@@ -142,6 +182,51 @@ provider-name="Parrot Developers">
     <assets>
       <icon>resources/icon.png</icon>
     </assets>
+  </extension>
+</addon>
+
+<addon id="script.module.js2py" name="js2py" version="1.0.0" provider-name="Parort Developers">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.pyjsparser" version="1.0.0"/>
+    <import addon="script.module.six" version="1.15.0+matrix.1"/>
+    <import addon="script.module.tzlocal" version="3.0.0+matrix.2"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/Js2Py</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/Js2Py</website>
+    <source>https://github.com/PiotrDabkowski/Js2Py</source>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+    <email></email>
+  </extension>
+</addon>
+
+<addon id="script.module.pyjsparser" name="pyjsparser" version="1.0.0" provider-name="ParrotDevelopers">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Pure Python JavaScript Translator/Interpreter</summary>
+    <description>Packed for Kodi from https://github.com/PiotrDabkowski/pyjsparser</description>
+    <platform>all</platform>
+    <language></language>
+    <license>MIT</license>
+    <forum></forum>
+    <website>https://github.com/PiotrDabkowski/pyjsparser</website>
+    <source>https://github.com/PiotrDabkowski/pyjsparser</source>
+    <assets>
+        <icon>icon.png</icon>
+    </assets>
+    <email></email>
   </extension>
 </addon>
 
