@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
+<?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.Parrot" name="[COLOR cyan]Parrot[/COLOR] [COLOR yellow]Repository[/COLOR]" provider-name="Parrot Developers" version="1.0.1">
 	<extension point="xbmc.addon.repository" name="Parrot Repository" >
 			<dir minversion="19.0.0">
@@ -30,4 +29,3 @@
 		</assets>
 	</extension>
 </addon>
-</addons>
