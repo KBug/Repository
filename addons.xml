@@ -106,7 +106,7 @@ provider-name="Parrot Developers">
 </addon>
 
 <addon id="plugin.video.vidembed"
-version="1.0.0"
+version="1.0.1"
 name="Vidembed.io"
 provider-name="Parrot Developers">
 <requires>
@@ -119,8 +119,8 @@ provider-name="Parrot Developers">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
-  <summary>Watch movies from vidembed.io</summary>
-  <description>Watch movies from vidembed.io</description>
+  <summary>Watch movies and series from vidembed.io</summary>
+  <description>Watch movies and series from vidembed.io</description>
   <disclaimer>I'm not affiliated with vidembed.io.</disclaimer>
   <assets>
     <icon>icon.jpg</icon>
@@ -128,6 +128,7 @@ provider-name="Parrot Developers">
   </assets>
   <news>
     [1.0.0] Initial version!
+    [1.0.1] TV shows now work!
   </news>
 </extension>
 </addon>
