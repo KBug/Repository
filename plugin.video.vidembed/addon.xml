@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.vidembed"
-version="1.0.1"
+version="1.0.3"
 name="Vidembed.io"
 provider-name="Parrot Developers">
 <requires>
@@ -23,6 +23,8 @@ provider-name="Parrot Developers">
   <news>
     [1.0.0] Initial version!
     [1.0.1] TV shows now work!
+    [1.0.2] Some refactoring.
+    [1.0.3] Fixed support for android devices.
   </news>
 </extension>
 </addon>
