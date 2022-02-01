@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.ustvgo"
-version="1.0.5"
+version="1.0.6"
 name="USTVGO"
 provider-name="Parrot Developers">
 <requires>
   <import addon="xbmc.python" version="3.0.0"/>
   <import addon="script.module.requests" version="2.25.1"/>
+  <import addon="inputstream.adaptive" version="2.3.13"/>
 </requires>
 <extension point="xbmc.python.pluginsource" library="addon.py">
   <provides>video</provides>
@@ -25,6 +26,7 @@ provider-name="Parrot Developers">
     [1.0.3] Removed bypass, added channels. I'll fix that bypass different day.
     [1.0.4] Added best encryption.
     [1.0.5] Added alternative links.
+    [1.0.6] Fixed addon.
   </news>
 </extension>
 </addon>
