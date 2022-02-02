@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.ustvgo"
-version="1.0.6"
+version="1.0.7"
 name="USTVGO"
 provider-name="Parrot Developers">
 <requires>
@@ -27,6 +27,7 @@ provider-name="Parrot Developers">
     [1.0.4] Added best encryption.
     [1.0.5] Added alternative links.
     [1.0.6] Fixed addon.
+    [1.0.7] Fixed channels. THX to jaygrizzy#7191 for AE.
   </news>
 </extension>
 </addon>
